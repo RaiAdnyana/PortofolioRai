@@ -1,0 +1,1367 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NANBAR */
+.container {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #272a33;
+    font-family: 'Poppins', sans-serif;
+}
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        width: 90%;
+        height: fit-content;
+        background-color: #272a33;
+        box-shadow: 2px 2px 30px #272a33;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px;
+        margin-left: 40px;
+    }
+
+    .logoFoto {
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .logoFoto img {
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+
+    .logoTeks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 22px;
+        font-weight: 800;
+        margin-left: 10px;
+    }
+
+    .menu {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+    }
+
+    .menu>li {
+        list-style: none;
+    }
+
+    .menu>li>a {
+        color : white;
+        font-size: 17px;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-family: 'Poppins', sans-serif;
+        transition: 0.7s;
+    }
+
+    .menu>li>a:hover {
+        color: #ff7324;
+        
+    }
+
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: white;
+        border-radius: 3px;
+        transition: all 0.5s;
+    }
+
+    .menu-toggle input {
+        position: absolute;
+        width: 40px;
+        height: 28px;
+        left: -11px;
+        top: -12px;
+        opacity:0;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu-toggle span:nth-child(2) {
+        transform-origin: 0 0 ;
+    }
+
+    .menu-toggle span:nth-child(4) {
+        transform-origin: 0 100%;
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(2) {
+        transform: rotate(45deg) translate(-1px,-1px);
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(3) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .menu-toggle input:checked ~ span:nth-child(4) {
+        transform: rotate(-45deg) translate(-1px, 0);
+    }
+/* NAVBAR END */
+
+
+/* UMUM */
+.foto {
+    width: 400px;
+    height: fit-content;
+}
+
+.Judul {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border-bottom: 2px solid #272a33;
+}
+
+.Judul1 {
+    margin-right: 4px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 5px;
+}
+
+.Judul2 {
+    margin-left: 4px;
+    color: #ff7324;
+    text-shadow: 2px 2px 10px black;
+    margin-bottom: 5px;
+}
+/* UMUM END */
+
+
+/* Home */
+.Home {
+    margin-top: 40px;
+    background-color: #3d4351;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+    .fotoHome {
+        border-radius: 50%;
+        width: 400px;
+        box-shadow: 2px 2px 10px #272a33;
+    }
+
+    .HomeTeks {
+        padding: 20px;
+        font-family: 'Poppins', sans-serif;
+        margin-right: 50px;
+    }
+
+    .HomeTeks p {
+        font-size: 27px ;
+        padding: 5px;
+        margin: 10px;
+        color: white;
+    }
+
+    .HomeTeks h2 {
+        font-size: 40px;
+        margin: 10px;
+        color: white;
+    }
+/* Home Selesai */
+
+
+/* PROFIL */
+.Profil {
+    padding-top: 120px;
+    width: 100%;
+    height: 1000px;
+    background-color: #3d4351;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .isiProfil {
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+    }
+
+    .fotoProfil {
+        border-radius: 50px;
+        width: 350px;
+        box-shadow: 5px 5px 10px #272a33;
+    }
+
+    .Biodata {
+        background-color: #636873;
+        color : white;
+        font-size: 17px;
+        border-radius: 50px;
+        width: 500px;
+        height: 310px;
+        padding: 20px;
+        box-shadow: 2px 2px 10px #272a33;
+        margin-left: 60px;
+    }
+
+    .Biodata p {
+        padding: 5px;
+        text-shadow: 2px 2px 10px black;
+    }
+
+    .Pendidikan {
+        align-items: center;
+        margin: 10px;
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #636873;
+        box-shadow: 2px 2px 10px #272a33 ;
+        border-radius: 50px;
+        width: 980px;
+        
+    }
+
+    .isiPendidikan {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .Sekolah {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        border-radius: 30px;
+        height: 250px;
+        width: 250px;
+        margin-top: 30px;
+        background-color: #ebebeb;
+        border-radius: 20px;
+        transition: 0.5s ease;
+    }
+
+    .Sekolah:hover {
+        transform: translateY(-8px);
+    }
+
+    .Sekolah img {
+        margin-top: 30px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .Sekolah h3 {
+        padding: 10px;
+        color : black;
+    }
+/* PROFIL END */
+
+
+/* ABOUT ME */
+.About {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #3d4351;
+    padding: 20px;
+    
+}
+
+    .fotoAbout {
+        border-radius: 50px ;
+        width: 450px;
+        object-fit: cover;
+        box-shadow: 5px 5px 10px #272a33;
+    }
+
+    .Cerita {
+        padding: 20px;
+        margin-left: 100px ;
+    }
+
+    .Isicerita {
+        width: 600px;
+        color: white;
+        font-size: 14.5px;
+        padding: 5px;
+    }
+
+    .Isicerita p {
+        margin-bottom: 15px;
+    }
+/* ABOUT ME END */
+
+
+/* SKIL */
+.Skil {
+    background-color: #3d4351;
+    width: 100%;
+    height: fit-content;
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .Daftar-Skil {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .skilRai {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        margin-top: 20px;
+        width: 85vw;
+    }
+
+    .namaSkil {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .namaSkil1 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .namaSkil img {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: 0.6s ease;
+        margin-bottom: 10px;
+    }
+
+    .namaSkil1 img {
+        border-radius: 20px;
+        transition: 0.6s ease;
+        margin-bottom: 10px;
+    }
+
+    .namaSkil h2 {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        text-shadow: 2px 2px 10px black;
+        transition: 1.2s ease;
+        cursor: default;
+    }
+
+    .namaSkil1 h2 {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        text-shadow: 2px 2px 10px black;
+        transition: 1.2s ease;
+        cursor: default;
+    }
+
+    .namaSkil h2:hover {
+        color: #ff7324;
+    }
+
+    .namaSkil1 h2:hover {
+        color: #ff7324;
+    }
+
+    .namaSkil img:hover{
+        transform: translateY(-8px);
+    }
+
+    .namaSkil1 img:hover{
+        transform: translateY(-8px);
+    }
+    
+/* SKIL END */
+
+
+/* CONTACT ME */
+.contact {
+    height: 650px;
+    width: 100%;
+    padding-top: 140px;
+    background-color: #3d4351;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+    .conteJudul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .keteranganJudul {
+        margin: 20px;
+        color: white;
+    }
+
+    .isiContact {
+        display: flex;
+        justify-content: center;
+    }
+
+    .Hubungi {
+        display: flex;
+        justify-content: space-around;
+        background-color: #636873;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px black;
+    }
+
+    .HubungiKiri {
+        border-radius: 10px;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .HubungiKanan {
+        width: 400px;
+        height: 300px;
+        text-align: center; 
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 30px;
+        margin-top: -4.5px;
+    }
+
+    input, textarea {
+        background-color: white;
+        border: 1px solid #D0D4CA;
+        color: black;
+        padding: 20px 25px;
+        margin: 5px ;
+    }
+
+    .HubungiKanan button {
+        width: 180px;
+        border-radius: 20px;
+        background-color: blue;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+        margin-left: 90px;
+        transition: 0.7s;
+    }
+
+    .HubungiKanan button:hover {
+        transform: scale(1.1);
+    }
+
+
+/* CONTACT END */
+
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 150px;
+}
+
+    .footerJudul {
+        color: white;
+        margin-bottom: 5px;
+    }
+
+
+    .footerJudul p {
+        color: white;
+    }
+
+    hr {
+        width: 85%;
+        color: white;
+    }
+
+
+    .footerisi {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .footerNama {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        width: 40%;
+        color: white;
+        margin-left: 30px;
+    }
+
+    .footerJudul {
+        font-size: 15px;
+    }
+
+    .footerKeterangan {
+        font-size: 15px;
+    }
+
+    .footerHubungi {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        width: fit-content;
+        color: white;
+        margin-right: 30px;
+    }
+
+    .footerMedsos {
+        display: flex;
+        color: white;
+    }
+
+    .footerMedsos i{
+        font-size: 30px;
+        color: white;
+        margin-right: 20px;
+        transition: 0.5s ease;
+    }
+
+    .footerMedsos i:hover {
+        transform: scale(1.1);
+    }
+
+    .Copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+/* Footer End */
+
+
+/* Responsive */
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    /* menu */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 80%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #272a33;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .menu.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .logoFoto img{
+        width: 40px;
+    }
+    /* menu end */
+
+    /* Umum */
+    .foto {
+        width: 280px;
+        height: fit-content;
+    }
+    
+    .Judul {
+        font-size: 15px;
+    }
+    
+    /* Umum End */
+
+    /* Home */
+    .Home {
+        /* display: flex; */
+        flex-direction: column-reverse;
+        /* align-items: center; */
+        justify-content: center;
+        height: 100vh;
+        padding: 0;
+    }
+    
+        .fotoHome {
+            border-radius: 50%;
+            width: 280px;
+            box-shadow: 2px 2px 10px #272a33;
+        }
+
+        .HomeTeks {
+            margin-top: 20px;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            margin-right: 0;
+        }
+
+        .HomeTeks p {
+            text-align: center;
+            font-size: 15px;
+            padding: 5px;
+            margin: 10px;
+            color: white;
+        }
+
+        .HomeTeks h2 {
+            font-size: 25px;
+            padding: 5px;
+            margin: 10px;
+            color: white;
+        }
+    /* Home End */
+
+    /* Profil */
+    .Profil {
+        padding-top: 120px;
+        height: fit-content;
+        background-color: #3d4351;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+        .isiProfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+        }
+    
+        .fotoProfil {
+            display: none;
+        }
+    
+        .Biodata {
+            background-color: #636873;
+            color : white ;
+            font-size: 11px;
+            border-radius: 30px;
+            width: 90%;
+            height:fit-content;
+            padding: 10px;
+            box-shadow: 2px 2px 10px #272a33;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    
+        .Biodata p {
+            padding: 5px;
+            text-shadow: 2px 2px 10px black;
+        }
+    
+        .Pendidikan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            margin-top: 30px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+    
+        .isiPendidikan {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    
+        .Sekolah {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            height: 200px;
+            width: 200px;
+            margin-top: 30px;
+            background-color: #ebebeb;
+            border-radius: 20px;
+            transition: 0.5s ease;
+        }
+    
+        .Sekolah:hover {
+            transform: translateY(-8px);
+        }
+    
+        .Sekolah img {
+            margin-top: 30px;
+            height: 100px;
+            width: 100px;
+        }
+    
+        .Sekolah h3 {
+            padding: 10px;
+            color : black;
+            font-size: 12px;
+        }
+    /* Profil End */
+
+    /* About */
+    .About {
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-color: #3d4351;
+        padding: 0;
+        
+    }
+    
+        .fotoAbout {
+            margin-top: 70px;
+            display: flex;
+            border-radius: 50px;
+            width: 280px;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px #272a33;
+        }
+    
+        .Cerita {
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: 0;
+        }
+    
+        .Isicerita {
+            width: 90%;
+            color: white;
+            font-size: 13px;
+            padding: 50;
+            text-align: center;
+        }
+    
+        .Isicerita p {
+            margin-bottom: 10px;
+        }
+    /* About End */
+
+
+    /* Skils */
+    .Skil {
+        background-color: #3d4351;
+        height: fit-content;
+        padding-top: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+        .Daftar-Skil {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+    
+        .skilRai {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 20px;
+            width: 85vw;
+        }
+    
+        .namaSkil {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 10px;
+        }
+
+        .namaSkil1 {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 10px;
+        }
+        
+        .namaSkil img {
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            transition: 0.6s ease;
+            margin-bottom: 10px;
+        }
+
+        .namaSkil1 img {
+            height: 200px;
+            width: 200px;
+            border-radius: 20px;
+            transition: 0.6s ease;
+            margin-bottom: 10px;
+        }
+    
+        .namaSkil h2 {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 10px black;
+            transition: 1.2s ease;
+            cursor: default;
+            font-size: 15px;
+        }
+    
+        .namaSkil1 h2 {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 2px 2px 10px black;
+            transition: 1.2s ease;
+            cursor: default;
+            font-size: 15px;
+        }
+    
+        .namaSkil h2:hover {
+            color: #ff7324;
+        }
+
+        .namaSkil1 h2:hover {
+            color: #ff7324;
+        }
+    
+        .namaSkil img:hover{
+            transform: translateY(-8px);
+        }
+
+        .namaSkil1 img:hover{
+            transform: translateY(-8px);
+        }
+    /* Skils End */
+
+    /* Contact */
+    .contact {
+        padding-top: 140px;
+        height: fit-content;
+        background-color: #3d4351;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+        .conteJudul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .keteranganJudul {
+            text-align: center;
+            font-size: 11px;
+            margin: 10px;
+            color: white;
+            width: 90%;
+        }
+    
+        .isiContact {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .Hubungi {
+            display: flex;
+            justify-content: space-around;
+            background-color: #636873;
+            padding: o;
+            border-radius: 20px;
+            box-shadow: 2px 2px 10px black;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+    
+        .HubungiKiri {
+            display: none;
+        }
+    
+        .HubungiKanan {
+            width: fit-content;
+            height: 300px;
+            text-align: center; 
+        }
+    
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+    
+        input, textarea {
+            background-color: #D0D4CA;
+            border: 1px solid #ebebeb;
+            color: black;
+            padding: 12px 15px;
+            margin: 5px ;
+        }
+    
+        .HubungiKanan h3 {
+            font-size: 20px;
+        }
+    
+        .HubungiKanan button {
+            width: 80px;
+            border-radius: 20px;
+            background-color: blue;
+            color: white;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 6px 10px;
+            border: none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+            margin-left: 200px;
+            transition: 0.7s;
+        }
+    
+        .HubungiKanan button:hover {
+            transform: scale(1.1);
+        }
+    /* Contact End */
+
+
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        height: fit-content;
+    }
+    
+        .footerJudul {
+            color: white;
+            margin-bottom: 5px;
+        }
+    
+    
+        .footerJudul p {
+            color: white;
+        }
+    
+        hr {
+            width: 85%;
+            color: white;
+        }
+    
+    
+        .footerisi {
+            width: 95%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+    
+        .footerNama {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            color: white;
+            margin-left: 0;
+            width: 90%;
+        }
+    
+        .footerJudul {
+            font-size: 15px;
+        }
+    
+        .footerKeterangan {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    
+        .footerHubungi {
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            color: white;
+            margin-right: 0;
+            width: 90%;
+        }
+    
+        .footerMedsos {
+            display: flex;
+            color: white;
+            margin-top: 10px;
+        }
+    
+        .footerMedsos i{
+            font-size: 30px;
+            color: white;
+            transition: 0.5s ease;
+        }
+    
+        .footerMedsos i:hover {
+            transform: scale(1.1);
+        }
+    
+        .Copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 13px;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 5px;
+        }
+    /* Footer End */
+}
+/* Mobile End */
+
+/* Tablet */
+@media screen and (min-width: 577px) and (max-width: 884px) {
+    .logoTeks {
+        font-size: 18px;
+    }
+    /* Navbar */
+    .menu li a {
+        font-size: 15px;
+    }
+    /* Navbar */
+
+    /* Umum */
+    .foto {
+        width: 370px;
+        height: fit-content;
+    }
+    
+    .Judul {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        border-bottom: 2px solid #272a33;
+    }
+    
+    .Judul1 {
+        margin-right: 4px;
+        color: white;
+        text-shadow: 2px 2px 10px black;
+        margin-bottom: 5px;
+    }
+    
+    .Judul2 {
+        margin-left: 4px;
+        color: #ff7324;
+        text-shadow: 2px 2px 10px black;
+        margin-bottom: 5px;
+    }
+    /* Umum End */
+
+
+
+    /* Home */
+    .Home {
+        flex-direction: column-reverse;
+        height: 100vh;
+        padding: 0;
+    }
+    
+        .fotoHome {
+            border-radius: 50%;
+            width: 370px;
+        }
+
+        .HomeTeks {
+            margin-top: 20px;
+            padding: 0;
+            margin-right: 0;
+        }
+
+        .HomeTeks p {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .HomeTeks h2 {
+            font-size: 30px;
+        }
+    /* Home End */
+
+    /* Profil */
+    .Profil {
+        padding-top: 120px;
+        height: fit-content;
+        background-color: #3d4351;
+        flex-direction: column;
+    }
+    
+        .isiProfil {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            width: 90%;
+        }
+    
+        .fotoProfil {
+            display: flex;
+            border-radius: 40px;
+            width: 370px;
+        }
+    
+        .Biodata {
+            font-size: 15px;
+            border-radius: 30px;
+            width: 70%;
+            height:fit-content;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    
+    
+        .Pendidikan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            margin-top: 30px;
+            border-radius: 30px;
+            width: fit-content;
+            margin-bottom: 20px;
+            width: 530px;
+        }
+    
+        .isiPendidikan {
+            flex-direction: column;
+        }
+    
+        .Sekolah {
+            height: 300px;
+            width: 300px;
+            margin-top: 30px;
+        }
+    
+        .Sekolah img {
+            margin-top: 30px;
+            height: 200px;
+            width: 200px;
+        }
+    
+        .Sekolah h3 {
+            padding: 25px;
+            font-size: 12px;
+        }
+    /* Profil End */
+
+    /* About */
+    .About {
+        margin-top: 70px;
+        flex-direction: column;
+        height: fit-content;
+        background-color: #3d4351;
+        padding: 0;
+        
+    }
+    
+        .fotoAbout {
+            margin-top: 70px;
+            display: flex;
+            width: 370px;
+        }
+    
+        .Cerita {
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: 0;
+        }
+    
+        .Isicerita {
+            width: 500px;
+            font-size: 15px;
+            text-align: center;
+        }
+    
+        .Isicerita p {
+            margin-bottom: 10px;
+        }
+    /* About End */
+
+
+    /* Skils */
+    .Skil {
+        height: fit-content;
+    }
+    
+        .skilRai {
+            flex-direction: column;
+        }
+    
+        .namaSkil img {
+            height: 350px;
+            width: 350px;
+        }
+    
+        .namaSkil h2 {
+            text-align: center;
+            font-size: 20px;
+        }
+    /* Skils End */
+
+    /* Contact */
+    .contact {
+        padding-top: 140px;
+        height: 100vh;
+    }
+    
+        .keteranganJudul {
+            text-align: center;
+            font-size: 15px;
+        }
+    
+        .Hubungi {
+            width: 80%;
+            margin-bottom: 20px;
+            height: 600px;
+        }
+    
+        .HubungiKiri {
+            display: none;
+        }
+    
+        .HubungiKanan {
+            width: fit-content;
+            height: 500px;
+            text-align: center; 
+        }
+
+        .form {
+            padding: 0;
+            height: 500px;
+            width: 500px;
+        }
+
+        input, textarea {
+            padding: 15px 20px;
+            margin: 20px;
+        }
+    
+        .HubungiKanan button {
+            width: 100px;
+            font-size: 15px;
+            margin-left: 200px;
+        }
+    /* Contact End */
+
+    /* Footer */
+    .footer {
+        height: fit-content;
+    }
+    
+        .footerisi {
+            width: 95%;
+        }
+    
+        .footerNama {
+            margin-top: 20px;
+            padding: 5px;
+            margin-left: 0;
+            width: 90%;
+        }
+    
+        .footerJudul {
+            font-size: 15px;
+        }
+    
+        .footerKeterangan {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    
+        .footerMedsos {
+            margin-top: 10px;
+        }
+    
+        .footerMedsos i{
+            font-size: 30px;
+
+        }
+        .Copyright {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+    /* Footer End */
+}
